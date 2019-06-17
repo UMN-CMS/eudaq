@@ -1,8 +1,5 @@
 include_directories(${EUDAQ_INCLUDE_DIRS})
-add_subdirectory(calice)
 add_subdirectory(eudet)
 add_subdirectory(example)
 add_subdirectory(itkstrip)
 add_subdirectory(cmshgcal)
-add_subdirectory(cmshgcal_dwc)
-add_subdirectory(cmshgcal_mcp)
