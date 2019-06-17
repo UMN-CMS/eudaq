@@ -18,10 +18,10 @@ link_directories( ${link_directories} ${EXTERN_BOOST_LIB_PREFIX} ${EXTERN_PUGIXM
 aux_source_directory(src MODULE_SRC)
 
 add_library(${EUDAQ_MODULE} SHARED ${MODULE_SRC})
-target_link_libraries(${EUDAQ_MODULE} ${EUDAQ_CORE_LIBRARY} boost_timer boost_thread boost_filesystem boost_regex boost_system boost_thread boost_program_options boost_iostreams cactus_extern_pugixml cactus_uhal_log cactus_uhal_grammars cactus_uhal_uhal ${ROOT_LIBRARIES})
+target_link_libraries(${EUDAQ_MODULE} ${EUDAQ_CORE_LIBRARY} boost_timer boost_thread boost_filesystem boost_regex boost_system boost_thread boost_program_options boost_iostreams pugixml cactus_uhal_log cactus_uhal_grammars cactus_uhal_uhal ${ROOT_LIBRARIES})
 
 add_executable(HGCalOnly_DAQ ${MODULE_SRC})
-target_link_libraries(HGCalOnly_DAQ ${EUDAQ_CORE_LIBRARY} ${EUDAQ_THREADS_LIB} boost_timer boost_thread boost_filesystem boost_regex boost_system boost_thread boost_program_options boost_iostreams cactus_extern_pugixml cactus_uhal_log cactus_uhal_grammars cactus_uhal_uhal ${ROOT_LIBRARIES})
+target_link_libraries(HGCalOnly_DAQ ${EUDAQ_CORE_LIBRARY} ${EUDAQ_THREADS_LIB} boost_timer boost_thread boost_filesystem boost_regex boost_system boost_thread boost_program_options boost_iostreams pugixml cactus_uhal_log cactus_uhal_grammars cactus_uhal_uhal ${ROOT_LIBRARIES})
 
 
 install(TARGETS ${EUDAQ_MODULE} HGCalOnly_DAQ
